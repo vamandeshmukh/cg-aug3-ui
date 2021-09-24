@@ -5,7 +5,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Capgemini</title>
-    <!-- Link to external CSS file  -->
+    <!-- 1. Link to external JS  -->
+    <script src="./05-external-js.js"></script>
 </head>
 
 <body>
@@ -13,7 +14,17 @@
     <hr>
     <p>Using JS in HTML</p>
     <hr>
-    <p class="my-css-style-4">This text is styled with external CSS.</p>
+    <!-- Inline JS  -->
+    <script> document.write("Outout from inline JS");</script>
+
+    <!-- 1. Define internal JS  -->
+    <script> function fun() { document.write("Output from internal JS"); }</script>
+    <p></p>
+    <!-- 2. Use internal JS  -->
+    <button onclick="fun()">Click here</button>
+    <p></p>
+    <!-- 2. Use external JS  -->
+    <button onclick="fun2()">Click here2</button>
 
 </body>
 
