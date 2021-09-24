@@ -2,9 +2,19 @@
 
 <!-- This is a comment. -->
 
+<!-- DRY - Don't Repeat Yourself.  -->
+
 <html lang="en">
 
 <head>
+    <!-- 1. Defining Internal CSS  -->
+    <style>
+        .my-class-style {
+            color: blueviolet;
+            font-family: 'Trebuchet MS';
+        }
+    </style>
+
     <meta charset="UTF-8">
     <title>Capgemini</title>
 </head>
@@ -12,8 +22,20 @@
 <body>
 
     <h1>Capgemini</h1>
+
+    <!-- Using Inline CSS  -->
     <h1 style="color: blue;">Capgemini</h1>
+    <h1 style="color: blue;">Dell</h1>
+    <h1 style="color: blue;">Microsoft</h1>
+    <h1 style="color: blue;">Cognizant</h1>
     <h1 style="color: blue; font-family: 'Trebuchet MS'">Capgemini</h1>
+    <hr>
+    <!-- 2. Using Internal CSS  -->
+    <h1 class="my-class-style">Capgemini</h1>
+    <h1 class="my-class-style">Dell</h1>
+    <h1>Microsoft</h1>
+    <h1>Cognizant</h1>
+
     <hr>
     <p>Capgemini is one of the largest IT organizations in the world. Capgemini is one of the largest IT organizations
         in the world. Capgemini is one of the largest IT organizations in the world. Capgemini is one of the largest IT
