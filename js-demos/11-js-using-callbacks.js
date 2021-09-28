@@ -32,15 +32,16 @@
 // fun(abc);
 
 // shortened version 
-// let fun = (abc) => {
-//     setTimeout(() => {
-//         abc({ message: `fun message` }); // functioncall 
-//     }, 2000);
-// }
+let fun = (abc) => {
+    setTimeout(() => {
+        abc({ message: `fun message` }); // functioncall 
+    }, 2000);
+}
 
-// fun((pqr) => {
-//     console.log(pqr.message);
-// });
+fun((pqr) => {
+    console.log(pqr.message);
+});
 
 // solution 2 . async and await 
 
+ 
