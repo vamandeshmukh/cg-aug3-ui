@@ -1,5 +1,5 @@
 
-// revise upto slide ppt 2 - slide 34
+// revise upto ppt 2 - slide 34
 // skip - IIFE, strict mode, hoisting   
 
 // for comparison - 
