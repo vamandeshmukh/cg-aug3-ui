@@ -23,6 +23,10 @@ num = false; // boolean
 console.log(num);
 console.log(typeof(num));
 
+const num2 = 20; // final in Java 
+console.log(num2);
+num2 = 30;
+console.log(num2);
 
 
 // let name = "Vaman";
