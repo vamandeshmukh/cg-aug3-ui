@@ -42,21 +42,22 @@
 //     console.log(pqr.message);
 // });
 
-// solution 2. Promise 
+// solution 2. using Promise
 let fun = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            let error = true;
-            if (!error)
+            let abc = true; // false;
+            if (abc)
                 resolve({ message: `fun message` });
             else
                 reject();
         }, 2000);
-    })
+    });
 }
-fun().then(getFun => {
-    console.log(getFun.message);
-}).catch(()=> {console.log(`wrong`)});
 
-// solution 2 . async and await 
+fun().then((xyz) => {
+    console.log(xyz.message);
+}).catch(() => { console.log(`Something is wrong!`) });
+
+// solution 3 . async and await 
 
