@@ -25,12 +25,14 @@ console.log(typeof(num));
 
 const num2 = 20; // final in Java 
 console.log(num2);
-num2 = 30;
+// num2 = 30;
 console.log(num2);
 
+// don't declare a variable with var 
+// var num3 = 30;
+// console.log(num3);
 
-// let name = "Vaman";
-// console.log(name);
+// don't declare variable like this 
+// num4 = 40;
+// console.log(num4);
 
-// let isItThere = true;
-// console.log(isItThere);
