@@ -32,16 +32,31 @@
 // fun(abc);
 
 // shortened version 
-let fun = (abc) => {
-    setTimeout(() => {
-        abc({ message: `fun message` }); // functioncall 
-    }, 2000);
-}
+// let fun = (abc) => {
+//     setTimeout(() => {
+//         abc({ message: `fun message` }); // functioncall 
+//     }, 2000);
+// }
 
-fun((pqr) => {
-    console.log(pqr.message);
-});
+// fun((pqr) => {
+//     console.log(pqr.message);
+// });
+
+// solution 2. Promise 
+let fun = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            let error = true;
+            if (!error)
+                resolve({ message: `fun message` });
+            else
+                reject();
+        }, 2000);
+    })
+}
+fun().then(getFun => {
+    console.log(getFun.message);
+}).catch(()=> {console.log(`wrong`)});
 
 // solution 2 . async and await 
 
- 
