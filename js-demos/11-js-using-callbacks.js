@@ -43,21 +43,51 @@
 // });
 
 // solution 2. using Promise
+// let fun = () => {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             let abc = true; // false; //  
+//             if (abc)
+//                 resolve({ message: `fun message` });
+//             else
+//                 reject({ message: `not a fun message` });
+//         }, 2000);
+//     });
+// }
+
+// fun().then((xyz) => {
+//     console.log(xyz.message);
+// });
+
+// fun().then((xyz) => {
+//     console.log(xyz.message);
+// }).catch(() => { console.log(`Something is wrong!`) });
+
+// fun().then((xyz) => {
+//     console.log(xyz.message);
+// })
+//     .catch((xyz) => {
+//         console.log(xyz.message)
+//     });
+
+// solution 3 . using async and await 
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await
+
 let fun = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            let abc = true; // false;
+            let abc = true; // false; //  
             if (abc)
                 resolve({ message: `fun message` });
             else
-                reject();
+                reject({ message: `not a fun message` });
         }, 2000);
     });
 }
 
-fun().then((xyz) => {
-    console.log(xyz.message);
-}).catch(() => { console.log(`Something is wrong!`) });
+let getFun = async () => {
+    const myFun = await fun();
+    console.log(myFun.message);
+}
 
-// solution 3 . async and await 
-
+getFun();
