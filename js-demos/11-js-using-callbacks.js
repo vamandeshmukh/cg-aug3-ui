@@ -73,21 +73,21 @@
 // solution 3 . using async and await 
 // https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await
 
-let fun = () => {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
+let fun = () => { // 4
+    return new Promise((resolve, reject) => { // 8 
+        setTimeout(() => { // 6 
             let abc = true; // false; //  
             if (abc)
-                resolve({ message: `fun message` });
+                resolve({ message: `fun message` }); // 7
             else
-                reject({ message: `not a fun message` });
+                reject({ message: `not a fun message` }); // OR 7
         }, 2000);
     });
 }
 
-let getFun = async () => {
-    const myFun = await fun();
-    console.log(myFun.message);
+let getFun = async () => { // 2
+    const myFun = await fun(); // 3
+    console.log(myFun.message); // 9 
 }
 
-getFun();
+getFun(); // 1
